@@ -1,0 +1,75 @@
+React Hooks Learning :- 
+
+useState:-
+
+useState is React Hook that allows you to add state to a functional component.
+It returns an array with two values: the current state and a function to update it. 
+The Hook takes an initial state value as an argument and returns an updated state
+value whenever the setter function is called.
+
+useState is a React Hook that lets you add a state variable to your component.
+
+const [state, setState] = useState(initialState);
+
+useEffect:-
+The useEffect Hook allows you to perform side effects in your components.
+Some examples of side effects are: fetching data, directly updating the DOM, and timers. 
+useEffect accepts two arguments.
+
+useEffect is a React Hook that lets you synchronize a component with an external system.
+
+useEffect(setup, dependencies?)
+
+React usecontext :-
+React Context is a way to manage state globally
+
+useContext is a React Hook that lets you read and subscribe to context from your component.
+useContext returns the context value for the calling component.
+It is determined as the value passed to the closest SomeContext.
+Provider above the calling component in the tree. If there is no such provider, then the returned value will be the defaultValue you 
+have passed to createContext for that context. The returned value is always up-to-date.
+React automatically re-renders components that read some context if it changes.
+const value = useContext(SomeContext)
+
+useRef
+useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+
+const ref = useRef(initialValue)
+
+React usereducer :-
+useReducer is a React hook function that accepts a reducer function, 
+and an initial state. const [state, dispatch] = useReducer(reducer, initialState); 
+This hook function returns an array with 2 values.
+
+Syntax => const [state, dispatch] = useReducer(reducer, initialState);
+
+
+React useCallback :-
+
+The React useCallback Hook returns a memoized callback function.
+
+Syntax:
+
+const memoizedCallback = useCallback(
+ () => {
+   doSomething(a, b);
+ },
+ [a, b],
+);
+
+useMemo
+useMemo is a React Hook that lets you cache the result of a calculation between re-renders.
+
+const cachedValue = useMemo(calculateValue, dependencies)
+
+useId
+useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
+
+const id = useId()
+
+import { useId } from 'react';
+
+function PasswordField() {
+  const passwordHintId = useId();
+  // ...
+}
